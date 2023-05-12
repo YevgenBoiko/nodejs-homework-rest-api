@@ -7,7 +7,7 @@ const { DB_HOST } = process.env;
 mongoose.set("strictQuery", true);
 
 mongoose
-  .connect(DB_HOST)
+  .connect(DB_HOST, { useNewUrlParser: true })
   .then(() => {
     app.listen(3000);
   })
